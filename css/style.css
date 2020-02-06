@@ -1,6 +1,15 @@
 /*
 Fichier Style
 */
+/*-----------------------
+importer _extend.scss
+------------------------*/
+.grille .jours, .grille .heures, .grille .cours {
+  justify-items: stretch;
+  display: -ms-grid;
+  display: grid;
+}
+
 /*-------------------------
 importer _layout.scss
 ---------------------------*/
@@ -18,7 +27,8 @@ importer _layout.scss
       grid-template-columns: 1fr 5fr;
   -ms-grid-rows: 1fr 11fr;
       grid-template-rows: 1fr 11fr;
-      grid-template-areas: ". jours" "heures cours";
+      grid-template-areas: ". jours"
+ "heures cours";
   justify-items: stretch;
 }
 
@@ -26,20 +36,25 @@ importer _layout.scss
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: jours;
-  background-color: red;
+  grid-template-columns: repeat(5, 1fr);
+  -ms-grid-columns: (1fr)[5];
 }
 
 .grille .heures {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: heures;
-  background-color: blue;
+  grid-template-rows: repeat(11, 1fr);
+  -ms-grid-rows: (1fr)[11];
 }
 
 .grille .cours {
   -ms-grid-row: 2;
   -ms-grid-column: 2;
   grid-area: cours;
-  background-color: green;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(11, 1fr);
+  -ms-grid-columns: (1fr)[5];
+  -ms-grid-rows: (1fr)[11];
 }
 /*# sourceMappingURL=style.css.map */

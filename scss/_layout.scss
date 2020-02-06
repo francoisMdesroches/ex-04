@@ -14,14 +14,18 @@
     justify-items: stretch;
     .jours{
         grid-area:jours;
-        background-color:red;
+        @extend %grilles-enfant;
+        grid-template-columns: repeat(5, 1fr);
     }
     .heures{
         grid-area:heures;
-        background-color:blue;
+        @extend %grilles-enfant;
+        grid-template-rows: repeat(11, 1fr);
     }
     .cours{
         grid-area:cours;
-        background-color: green;
+        @extend %grilles-enfant;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(11, 1fr);
     }
 }
