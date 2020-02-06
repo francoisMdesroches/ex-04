@@ -52,7 +52,8 @@ importer _layout.scss
       grid-template-columns: 1fr 5fr;
   -ms-grid-rows: 1fr 11fr;
       grid-template-rows: 1fr 11fr;
-      grid-template-areas: ". jours" "heures cours";
+      grid-template-areas: ".      jours"
+ "heures cours";
   justify-items: stretch;
 }
 

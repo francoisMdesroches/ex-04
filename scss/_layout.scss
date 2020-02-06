@@ -10,7 +10,7 @@
     height: 90vh;
     grid-template-columns: 1fr 5fr;
     grid-template-rows: 1fr 11fr;
-    grid-template-areas: ". jours"
+    grid-template-areas: ".      jours"
                          "heures cours";
     justify-items: stretch;
     .jours{
