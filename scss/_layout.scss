@@ -16,16 +16,52 @@
         grid-area:jours;
         @extend %grilles-enfant;
         grid-template-columns: repeat(5, 1fr);
+        span{
+            background-color:$couleur-jours;
+            @extend %cases-enfant;
+        }
     }
     .heures{
         grid-area:heures;
         @extend %grilles-enfant;
         grid-template-rows: repeat(11, 1fr);
+        span{
+            background-color:$couleur-heures;
+            @extend %cases-enfant;
+        }
     }
     .cours{
         grid-area:cours;
         @extend %grilles-enfant;
         grid-template-columns: repeat(5, 1fr);
         grid-template-rows: repeat(11, 1fr);
+        span{
+            background-color:$couleur-cours;
+            @extend %cases-enfant;
+        }
+        :first-child{
+            grid-column: 1;
+            grid-row:6/11;
+        }
+        :nth-child(2){
+            grid-column: 2;
+            grid-row:7/11;
+        }
+        :nth-child(3){
+            grid-column: 3;
+            grid-row:6/9;
+        }
+        :nth-child(4){
+            grid-column: 4;
+            grid-row: 1/5;
+        }
+        :nth-child(5){
+            grid-column: 4;
+            grid-row: 7/11;
+        }
+        :last-child{
+            grid-column: 5;
+            grid-row:6/9;
+        }
     }
 }

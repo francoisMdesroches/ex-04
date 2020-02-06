@@ -2,12 +2,25 @@
 Fichier Style
 */
 /*-----------------------
+importer _variables.scss
+------------------------*/
+/*-----------------------
 importer _extend.scss
 ------------------------*/
 .grille .jours, .grille .heures, .grille .cours {
   justify-items: stretch;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
   display: -ms-grid;
   display: grid;
+}
+
+.grille .jours span, .grille .heures span, .grille .cours span {
+  text-align: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid black;
 }
 
 /*-------------------------
@@ -27,8 +40,7 @@ importer _layout.scss
       grid-template-columns: 1fr 5fr;
   -ms-grid-rows: 1fr 11fr;
       grid-template-rows: 1fr 11fr;
-      grid-template-areas: ". jours"
- "heures cours";
+      grid-template-areas: ". jours" "heures cours";
   justify-items: stretch;
 }
 
@@ -36,25 +48,85 @@ importer _layout.scss
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: jours;
-  grid-template-columns: repeat(5, 1fr);
   -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+}
+
+.grille .jours span {
+  background-color: #47afc2;
 }
 
 .grille .heures {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: heures;
-  grid-template-rows: repeat(11, 1fr);
   -ms-grid-rows: (1fr)[11];
+      grid-template-rows: repeat(11, 1fr);
+}
+
+.grille .heures span {
+  background-color: #903bf1;
 }
 
 .grille .cours {
   -ms-grid-row: 2;
   -ms-grid-column: 2;
   grid-area: cours;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(11, 1fr);
   -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
   -ms-grid-rows: (1fr)[11];
+      grid-template-rows: repeat(11, 1fr);
+}
+
+.grille .cours span {
+  background-color: #33c77d;
+}
+
+.grille .cours :first-child {
+  -ms-grid-column: 1;
+  grid-column: 1;
+  -ms-grid-row: 6;
+  -ms-grid-row-span: 5;
+  grid-row: 6/11;
+}
+
+.grille .cours :nth-child(2) {
+  -ms-grid-column: 2;
+  grid-column: 2;
+  -ms-grid-row: 7;
+  -ms-grid-row-span: 4;
+  grid-row: 7/11;
+}
+
+.grille .cours :nth-child(3) {
+  -ms-grid-column: 3;
+  grid-column: 3;
+  -ms-grid-row: 6;
+  -ms-grid-row-span: 3;
+  grid-row: 6/9;
+}
+
+.grille .cours :nth-child(4) {
+  -ms-grid-column: 4;
+  grid-column: 4;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 4;
+  grid-row: 1/5;
+}
+
+.grille .cours :nth-child(5) {
+  -ms-grid-column: 4;
+  grid-column: 4;
+  -ms-grid-row: 7;
+  -ms-grid-row-span: 4;
+  grid-row: 7/11;
+}
+
+.grille .cours :last-child {
+  -ms-grid-column: 5;
+  grid-column: 5;
+  -ms-grid-row: 6;
+  -ms-grid-row-span: 3;
+  grid-row: 6/9;
 }
 /*# sourceMappingURL=style.css.map */

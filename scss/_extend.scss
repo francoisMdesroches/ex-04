@@ -1,4 +1,11 @@
 %grilles-enfant{
     justify-items: stretch;
+    align-items: stretch;
     display: grid;
+}
+
+%cases-enfant{
+    text-align: center;
+    box-sizing: border-box;
+    border: 1px solid black;
 }
