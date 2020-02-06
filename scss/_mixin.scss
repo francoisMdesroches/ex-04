@@ -1,0 +1,5 @@
+@mixin colorier-cases ($couleur){
+    background-color: $couleur;
+    border: 2px solid lighten($couleur, $amount: 10%);
+    color:lighten($couleur, $amount: 40%);
+}

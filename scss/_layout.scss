@@ -1,6 +1,7 @@
 * {
     margin:0;
     padding:0;
+    font-family: sans-serif;
 }
 
 .grille{
@@ -17,8 +18,8 @@
         @extend %grilles-enfant;
         grid-template-columns: repeat(5, 1fr);
         span{
-            background-color:$couleur-jours;
             @extend %cases-enfant;
+            @include colorier-cases($couleur-jours);
         }
     }
     .heures{
@@ -26,8 +27,8 @@
         @extend %grilles-enfant;
         grid-template-rows: repeat(11, 1fr);
         span{
-            background-color:$couleur-heures;
             @extend %cases-enfant;
+            @include colorier-cases($couleur-heures);
         }
     }
     .cours{
@@ -38,6 +39,7 @@
         span{
             background-color:$couleur-cours;
             @extend %cases-enfant;
+            @include colorier-cases($couleur-cours);
         }
         :first-child{
             grid-column: 1;
