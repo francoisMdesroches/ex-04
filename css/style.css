@@ -8,4 +8,38 @@ importer _layout.scss
   margin: 0;
   padding: 0;
 }
+
+.grille {
+  display: -ms-grid;
+  display: grid;
+  width: 90vw;
+  height: 90vh;
+  -ms-grid-columns: 1fr 5fr;
+      grid-template-columns: 1fr 5fr;
+  -ms-grid-rows: 1fr 11fr;
+      grid-template-rows: 1fr 11fr;
+      grid-template-areas: ". jours" "heures cours";
+  justify-items: stretch;
+}
+
+.grille .jours {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: jours;
+  background-color: red;
+}
+
+.grille .heures {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: heures;
+  background-color: blue;
+}
+
+.grille .cours {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: cours;
+  background-color: green;
+}
 /*# sourceMappingURL=style.css.map */

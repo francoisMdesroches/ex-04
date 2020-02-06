@@ -2,3 +2,26 @@
     margin:0;
     padding:0;
 }
+
+.grille{
+    display: grid;
+    width:90vw;
+    height: 90vh;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 11fr;
+    grid-template-areas: ". jours"
+                         "heures cours";
+    justify-items: stretch;
+    .jours{
+        grid-area:jours;
+        background-color:red;
+    }
+    .heures{
+        grid-area:heures;
+        background-color:blue;
+    }
+    .cours{
+        grid-area:cours;
+        background-color: green;
+    }
+}
